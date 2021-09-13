@@ -1,11 +1,14 @@
 import { Action } from "redux";
+import { namespace } from "@modules/Sample/config/constants";
 
-interface SampleState {
+export interface SampleState {
+  name: string
 }
 
-const initialState: SampleState = {};
+const initialState: SampleState = { name: "sample" };
 
-export default function chat(state: SampleState = initialState, action: Action<string>) {
+export const name = `${namespace}_sample`;
+export default function sample(state: SampleState = initialState, action: Action<string>) {
   switch (action.type) {
     default:
       return state;

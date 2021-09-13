@@ -1,5 +1,5 @@
 import { ModuleConfig } from "@core/interfaces";
-import { sample } from "@modules/Sample/config/constants";
+import { name as sample } from "@modules/Sample/reducers/sample";
 
 const config: ModuleConfig = {
   name: "Sample",

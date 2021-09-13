@@ -15,7 +15,7 @@ src/modules/Sample/
 bootstraps.ts
 ```javascript
 import { ModuleConfig } from "@core/interfaces";
-import { sample } from "@modules/Sample/config/constants";
+import { name as sample } from "@modules/Sample/reducers/sample";
 
 const config: ModuleConfig = {
   name: "Sample", // name of the folder module
@@ -40,9 +40,7 @@ export default config;
 
 config/constants.ts
 ```javascript
-const namespace = "namespace:sample"; // define namespace of module
-
-export const sample = `${namespace}_sample`; // name of state in store, concat with namespace to prevent conflict state name with other namespace
+export const namespace = "namespace:sample"; // define namespace of module
 ```
 
 reducers/sample.ts
@@ -54,7 +52,8 @@ interface SampleState {
 
 const initialState: SampleState = {};
 
-export default function chat(state: SampleState = initialState, action: Action<string>) {
+export const name = `${namespace}_sample`; // name of state in store, concat with namespace to prevent conflict state name with other namespace
+export default function sample(state: SampleState = initialState, action: Action<string>) {
   switch (action.type) {
     default:
       return state;

@@ -2,7 +2,7 @@
   "compilerOptions": {
       "baseUrl": "./",
       "paths": {
-         "@/*" : ["src/*"],
+         "@root/*" : ["src/*"],
          "@core/*" : ["src/core/*"],
          "@modules" : ["src/modules"],
          "@modules/*" : ["src/modules/*"],

@@ -64,6 +64,15 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^@root(.*)$": "<rootDir>/src$1",
+      "^@core(.*)$": "<rootDir>/src/core$1",
+      "^@modules(.*)$": "<rootDir>/src/modules$1",
+      "^@store(.*)$": "<rootDir>/src/store$1",
+      "^@utils(.*)$": "<rootDir>/src/utils$1"
+    }
+  },
   "devDependencies": {
     "@craco/craco": "^6.3.0",
     "@types/lodash.clonedeep": "^4.5.6",

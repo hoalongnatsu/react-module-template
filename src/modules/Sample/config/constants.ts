@@ -1,3 +1,1 @@
-const namespace = "namespace:sample";
-
-export const sample = `${namespace}_sample`;
+export const namespace = "namespace:sample";

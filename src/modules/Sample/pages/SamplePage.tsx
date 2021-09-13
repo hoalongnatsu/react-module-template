@@ -1,15 +1,15 @@
-import React from 'react'
+import { SampleState, name } from "@modules/Sample/reducers/sample";
 
-interface Props {
-  
-}
+import React from "react";
+import { RootState } from "@core/interfaces";
+import { useSelector } from "react-redux";
+
+interface Props {}
 
 const SamplePage = (props: Props) => {
-  return (
-    <div>
-      SamplePage
-    </div>
-  )
-}
+  const sample: SampleState = useSelector((state: RootState) => state[name]);
 
-export default SamplePage
+  return <div>{sample.name}</div>;
+};
+
+export default SamplePage;
